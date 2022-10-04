@@ -8,6 +8,8 @@ We would really like your efforts to try out the project and leave feedbacks for
 # How to use it?
 There are two ways to do it. 
 1. Build the flutter project on your system and then install the app in your smartphone. 
-2. Change the branch and find the android application and over there your will have all the versions of the app with their individual readme of their specifications
+2. Change the branch and find the android application and over there your will have all the versions of the app with their individual readme of their specifications.
+Link : https://github.com/Abhimanyu07/iot-control-app/tree/android-applications
 
 There is another branch for sample esp8266 and esp32 webserver programs which you can flash on your borards.
+Link : https://github.com/Abhimanyu07/iot-control-app/tree/sample-programs
