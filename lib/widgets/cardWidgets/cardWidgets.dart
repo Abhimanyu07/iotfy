@@ -84,6 +84,7 @@ insertDevice(BuildContext context)async{
                     )
                   ),
                 ),
+
               ),
                 const SizedBox(width: 20,),
                 SizedBox(
