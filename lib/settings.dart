@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled1/widgets/textWidgets/textWidgets.dart';
 
 class settingPage extends StatefulWidget {
   const settingPage({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class _settingPageState extends State<settingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Settings'),
+        title: textWidgets().appBarText('Settings'),
       ),
       body: const Center(
         child: Padding(
