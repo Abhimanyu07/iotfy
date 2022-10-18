@@ -15,9 +15,14 @@ class _settingPageState extends State<settingPage> {
       appBar: AppBar(
         title: textWidgets().appBarText('Settings'),
       ),
-      body: const Center(
+      body:  Center(
         child: Padding(
           padding:  EdgeInsets.all(10),
+          child: Column(
+            children: [
+
+            ],
+          ),
         ),
       ),
     );

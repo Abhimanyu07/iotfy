@@ -11,6 +11,9 @@ class deviceData{
   static const deviceId = 'did';
   static const deviceName = 'dname';
   static const devicePin = 'dpin';
+  static const deviceIp = 'dip';
+  static const isURL = 'disURL';
+  static const deviceURL = 'dURL';
 
   deviceData._privateConstructor();
   static final deviceData instance = deviceData._privateConstructor();
@@ -39,7 +42,10 @@ class deviceData{
       CREATE TABLE $tableName (
       $deviceId INTEGER PRIMARY KEY,
       $deviceName TEXT NOT NULL,
-      $devicePin INTEGER NOT NULL)
+      $devicePin INTEGER NOT NULL,
+      $deviceIp TEXT,
+      $isURL INTEGER,
+      $deviceURL TEXT)
       '''
     );
 
@@ -49,8 +55,21 @@ class deviceData{
     return await db!.delete(tableName,where:'$deviceId = ?',whereArgs:[id]);
   }
 
-  Future<int> insert(Map<String,String> row)async{
+  Future<int> insert(Map<String,dynamic> row)async{
     Database? db = await instance.database;
     return await db!.insert(tableName, row);
   }
+  Future<List<Map<String,dynamic>>> queryAll ()async{
+    Database? db = await instance.database;
+    return await db!.query(tableName);
+  }
+
+
+  Future<int>update(Map<String,dynamic> row,String tableName) async{
+    Database? db = await instance.database;
+    int id = row[deviceId];
+    return await db!.update(tableName, row, where: '$deviceId = ?', whereArgs: [id]);
+  }
+
+
 }
