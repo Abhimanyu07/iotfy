@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:untitled1/widgets/textWidgets/textWidgets.dart';
+import 'package:iotfy/widgets/textWidgets/textWidgets.dart';
 
 class cardForGrid extends StatelessWidget {
   final String data;
@@ -52,25 +52,17 @@ insertDevice(BuildContext context)async{
   TextEditingController devicePin = TextEditingController();
   return showDialog(context: context, builder: (BuildContext context){
     return AlertDialog(
-      title: textWidgets().appBarText('Insert Device'),
+      title: textWidgets().appBarText('Insert Room Name'),
       content:
         Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           mainAxisSize: MainAxisSize.min,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                textWidgets().contentText('Device Name'),
-                const SizedBox(width: 10,),
-                textWidgets().contentText('Device Pin')
-              ],
-            ),
 
             Row(
               children:[
               SizedBox(
-                width: 150,
+                width: MediaQuery.of(context).size.width/1.8,
                 height: 100,
                 child: TextField(
                   maxLength: 12,
@@ -86,29 +78,19 @@ insertDevice(BuildContext context)async{
                 ),
 
               ),
-                const SizedBox(width: 20,),
-                SizedBox(
-                  width: 50,
-                  height: 100,
-                  child: TextField(
-                    style: const TextStyle(fontSize: 24),
-                    keyboardType: TextInputType.number,
-                    controller: devicePin,
-                    maxLength: 2,
-                    decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.grey[200],
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12)
-                        )
-                    ),
-                  ),
-                )
+
+
           ]
             ),
 
           ],
         ),
+
+      actions: [
+        MaterialButton(onPressed: (){},
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        child: Text('SUBMIT',style: TextStyle(color: Colors.white),),color: Colors.grey,)
+      ],
 
     );
   });

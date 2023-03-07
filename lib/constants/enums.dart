@@ -1,0 +1,6 @@
+
+enum DEVICE_TYPE {
+  TOGGLE,
+  COLOR_PANEL,
+  SLIDER
+}

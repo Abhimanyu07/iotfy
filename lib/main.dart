@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:untitled1/data.dart';
-import 'package:untitled1/settings.dart';
-import 'package:untitled1/widgets/textWidgets/textWidgets.dart';
+import 'package:iotfy/data.dart';
+import 'package:iotfy/settings.dart';
+import 'package:iotfy/widgets/textWidgets/textWidgets.dart';
 
 void main() {
   runApp(
